@@ -8,14 +8,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            const Text('Bluetooth mouse'),
-            TextField(
-              keyboardType: TextInputType.number,
-              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-            )
-          ],
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.6,
+          child: Column(
+            children: [
+              const Text('Bluetooth mouse'),
+              TextField(
+                keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              ),
+              ElevatedButton(onPressed: () {}, child: const Text('Check'))
+            ],
+          ),
         ),
       ),
     );
