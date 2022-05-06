@@ -9,14 +9,20 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.6,
+          width: MediaQuery.of(context).size.width * 0.7,
           child: Column(
             children: [
+              const Padding(padding: EdgeInsets.only(top: 80)),
               const Text('Bluetooth mouse'),
-              TextField(
-                keyboardType: TextInputType.number,
-                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              const Padding(padding: EdgeInsets.only(top: 10)),
+              SizedBox(
+                width: 200,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                ),
               ),
+              const Padding(padding: EdgeInsets.only(top: 40)),
               ElevatedButton(onPressed: () {}, child: const Text('Check'))
             ],
           ),
